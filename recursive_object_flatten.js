@@ -1,6 +1,6 @@
 function flattenObject(obj) {
-    let flattenObj = {};
     if (typeof obj !== 'object') return;
+    let flattenObj = {};
     Object.keys(obj).forEach(key => {
         if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
             return flattenObj = {...flattenObj, ...flattenObject(obj[key])};
