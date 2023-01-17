@@ -1,5 +1,5 @@
 function flattenObject(obj) {
-    if (typeof obj !== 'object') return;
+    if (typeof obj !== 'object') return 'Not an object.';
     let flattenObj = {};
     Object.keys(obj).forEach(key => {
         if (typeof obj[key] === 'object' && !Array.isArray(obj[key])) {
